@@ -1,0 +1,34 @@
+<%- include('layout', { 
+  body: `
+    <div class="exam-container">
+      <h2>👥 Список пациентов</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ФИО</th>
+            <th>Пол</th>
+            <th>Дата рождения</th>
+            <th>Адрес</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          ${
+            patients.length === 0
+              ? '<tr><td colspan="5">Пациенты не найдены</td></tr>'
+              : patients.map(p => `
+                  <tr>
+                    <td>${p.name}</td>
+                    <td>${p.gender || '-'}</td>
+                    <td>${p.birth_date || '-'}</td>
+                    <td>${p.home_address || '-'}</td>
+                    <td><a href="/patients/${p.id}">Открыть карточку</a></td>
+                  </tr>
+                `).join('')
+          }
+        </tbody>
+      </table>
+    </div>
+  `,
+  doctor 
+}) %>

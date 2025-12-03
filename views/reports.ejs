@@ -1,0 +1,66 @@
+<%- include('layout', { 
+  body: `
+    <div class="reports-container">
+      <h2>📊 Отчетность</h2>
+
+      <div class="report-section">
+        <h3>📅 Вызовы по дате</h3>
+        <input type="date" id="dateFilter" value="${date}">
+        <button onclick="loadReports()">Обновить</button>
+        <table id="visitsTable">
+          <thead>
+            <tr><th>Дата</th><th>Кол-во вызовов</th><th>Врачи</th></tr>
+          </thead>
+          <tbody>
+            ${
+              visitsByDate.map(row => `
+                <tr>
+                  <td>${row.date}</td>
+                  <td>${row.count}</td>
+                  <td>${row.doctors}</td>
+                </tr>
+              `).join('')
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="report-section">
+        <h3>🏥 Больные по диагнозу</h3>
+        <table>
+          <thead><tr><th>Диагноз</th><th>Кол-во пациентов</th></tr></thead>
+          <tbody>
+            ${
+              byDiagnosis.map(row => `
+                <tr>
+                  <td>${row.diagnosis}</td>
+                  <td>${row.patients_count}</td>
+                </tr>
+              `).join('')
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="report-section">
+        <h3>💊 Лекарства и побочные эффекты</h3>
+        <table>
+          <thead><tr><th>Название</th><th>Прием</th><th>Действие</th><th>Побочные эффекты</th></tr></thead>
+          <tbody>
+            ${
+              medicines.map(m => `
+                <tr>
+                  <td>${m.name}</td>
+                  <td>${m.intake_method}</td>
+                  <td>${m.action_description}</td>
+                  <td>${m.side_effects}</td>
+                </tr>
+              `).join('')
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `,
+  doctor 
+}) %>

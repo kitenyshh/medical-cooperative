@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Медицинский кооператив</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🏥 Медицинский кооператив</h1>
+    <% if (typeof doctor !== 'undefined' && doctor) { %>
+      <div class="user-info">
+        Врач: <%= doctor.name %> |
+        <a href="/exam">Осмотр</a> |
+        <a href="/patients">Пациенты</a> |
+        <a href="/diagnoses">Диагнозы</a> |
+        <a href="/reports">Отчеты</a> |
+        <a href="/logout">Выход</a>
+      </div>
+    <% } %>
+  </header>
+
+  <main>
+    <%- body %>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

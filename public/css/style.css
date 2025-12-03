@@ -1,0 +1,241 @@
+:root {
+  --primary: #2457a7;
+  --primary-dark: #1b4280;
+  --accent: #ff6b6b;
+  --bg: #f3f6fb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: #222;
+}
+
+/* Шапка */
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.user-info {
+  font-size: 0.9rem;
+}
+
+.user-info a {
+  color: #ffebc2;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.user-info a:hover {
+  text-decoration: underline;
+}
+
+/* Основной контейнер */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Карточки */
+
+.login-container,
+.exam-container,
+.reports-container {
+  background: #fff;
+  padding: 24px 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,35,95,0.08);
+  margin-bottom: 24px;
+}
+
+.login-container {
+  max-width: 520px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 20px 0 10px;
+  color: #444;
+  border-bottom: 1px solid #e1e6f0;
+  padding-bottom: 4px;
+}
+
+/* Формы, поля, кнопки */
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0;
+  border-radius: 6px;
+  border: 1px solid #d0d7e2;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(36,87,167,0.15);
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.button-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.button-secondary {
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row > * {
+  flex: 1;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Сообщения об ошибках */
+
+.error {
+  background: #ffe5e5;
+  color: #9b1c1c;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+/* Таблицы */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e1e6f0;
+  text-align: left;
+}
+
+th {
+  background: #f1f4fb;
+  font-weight: 600;
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background: #fafbff;
+}
+
+tbody tr:hover {
+  background: #edf3ff;
+}
+
+/* Секции в отчётах */
+
+.report-section {
+  background: #fff;
+  margin: 20px 0;
+  padding: 20px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15,35,95,0.06);
+}
+
+.report-section h3 {
+  margin-top: 0;
+}
+
+/* Мелочи */
+
+.login-container h2,
+.exam-container h2 {
+  margin-bottom: 18px;
+}
+
+.login-container form {
+  max-width: 420px;
+  margin-top: 10px;
+}
+
+.login-container button {
+  margin-top: 8px;
+}
+
+.login-container p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.exam-container table {
+  margin-bottom: 10px;
+}

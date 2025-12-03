@@ -1,0 +1,4 @@
+node_modules
+medical.db
+npm-debug.log*
+.env
