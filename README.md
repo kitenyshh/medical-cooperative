@@ -11,12 +11,12 @@
 - Frontend: HTML, CSS, нативный JavaScript
 
 ## Как запустить проект
-
+```
 git clone https://github.com/kitenyshh/medical-cooperative.git
 cd medical-cooperative
 npm install
 node server.js
-
+```
 После запуска сервер будет доступен по адресу:  
 `http://localhost:3000`
 
